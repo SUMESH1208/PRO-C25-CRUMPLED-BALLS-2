@@ -24,12 +24,12 @@ function setup() {
 
 	
    
-	dustbin = createSprite(650,540,150,180)
+	dustbin = createSprite(650,555,150,180)
 	dustbin.addImage(dustbinimage)
-	dustbin.scale = 0.6
+	dustbin.scale = 0.5
 	
-	rightdustbin = new Dustbin(729,564,10,180)
-	leftdustbin = new Dustbin(578,565,10,180)
+	leftdustbin = new Dustbin(729,564,10,150)
+	rightdustbin = new Dustbin(578,565,10,150)
 	bottomdustbin = new Dustbin(650,635,150,10)
 
 	Engine.run(engine);
@@ -56,7 +56,7 @@ function draw() {
 
 function keyPressed(){
 	if (keyCode === UP_ARROW){
-	Matter.Body.applyForce(paper1.body, paper1.body.position, {x:245,y:-245});
+	Matter.Body.applyForce(paper1.body, paper1.body.position, {x:270,y:-270});
 	}
 }
 
